@@ -1,0 +1,7 @@
+<manifest projecttype="SUITEAPP">
+  <publisherid>dissaor.merama</publisherid>
+  <projectid>dissaornotification</projectid>
+  <projectname>NetsuitNotifacation-MeramaNottificationService</projectname>
+  <projectversion>0.0.1</projectversion>
+  <frameworkversion>1.0</frameworkversion>
+</manifest>
