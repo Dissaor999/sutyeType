@@ -1,6 +1,7 @@
 /**
  * @NApiVersion 2.1
  * @NScriptType UserEventScript
+ * @Author Dissaor
  */
 define([],
 
@@ -16,11 +17,13 @@ define([],
         const afterSubmit = (scriptContext) => {
             const now = new Date();
             var actionRecord = scriptContext.newRecord;
+            var id = actionRecord.id;
+            var record = actionRecord.type;
             var Responsearr = {
-                "resource": "recurso de los items",
+                "resource": "&id="+ id + "&recordtype="+record,
                 "user_id": 1203142,//el usuario de Redlemon de netsuite
                 "timeline": now.toISOString(),
-                "topic": actionRecord.type,
+                "topic": actionRecord.type, //inventoryitem
                 "sent": now.toISOString(),
             };
             log.audit({

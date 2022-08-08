@@ -15,13 +15,11 @@ define(['N/record', 'N/error'],
         }
         // Get a standard NetSuite record
         function _get(context) {
-            // doValidation([context.recordtype, context.id], ['recordtype', 'id'], 'GET');
-            // return JSON.stringify(record.load({
-            //     type: context.recordtype,
-            //     id: context.id
-            // }));
-            var data = JSON.parse(context); // <- this
-            return "This record is a " + data.recordtype + " and the ID is " + data.id;
+            doValidation([context.recordtype, context.id], ['recordtype', 'id'], 'GET');
+            return record.load({
+                type: context.recordtype,
+                id: context.id
+            });
         }
 
         return {
